@@ -1,0 +1,7 @@
+## Interface:
+## Title: nastyeUI
+## Version: 0.0.1
+delete.lua
+minimap.lua
+cvars.lua
+tooltip.lua
