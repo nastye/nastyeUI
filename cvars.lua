@@ -46,3 +46,5 @@ SetCVar("SpellQueueWindow", "200")
 --------------------------
 
 SetCVar("floatingCombatTextCombatDamage", 1)
+SetCVar("floatingCombatTextCombatHealing", 1)
+SetCVar("floatingCombatTextCombatLogPeriodicSpells", 1)
