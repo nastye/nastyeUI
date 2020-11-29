@@ -1,7 +1,9 @@
 ## Interface:
 ## Title: nastyeUI
 ## Version: 0.0.1
+## SavedVariablesPerCharacter: lastAppliedChatVer
+chat.lua
+cvars.lua
 delete.lua
 minimap.lua
-cvars.lua
 tooltip.lua
