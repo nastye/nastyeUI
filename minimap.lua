@@ -61,12 +61,6 @@ function frame:OnEvent(event, arg1)
 
     local border = QueueStatusMinimapButton:GetRegions()
     border:Hide()
-
-    for i, child in ipairs({QueueStatusMinimapButton:GetRegions()}) do
-      print(i)
-      print(child:GetName())
-      print(child:GetObjectType())
-    end
     
     BuffFrame:ClearAllPoints()
     BuffFrame:SetPoint("TOPRIGHT", Minimap, "TOPLEFT", -10, 0)
