@@ -7,6 +7,7 @@ function frame:OnEvent(event, arg1)
     Minimap:ClearAllPoints()
     Minimap:SetPoint("TOPRIGHT", UIParent, "TOPRIGHT", -5, -5)
 
+    -- minimap tracking dropdown
     MiniMapTracking:ClearAllPoints()
     MiniMapTracking:SetPoint("BOTTOMLEFT", Minimap, "BOTTOMLEFT", 0, 0)
     MiniMapTracking.SetPoint = function() end
@@ -46,6 +47,14 @@ function frame:OnEvent(event, arg1)
 
     BuffFrame:ClearAllPoints()
     BuffFrame:SetPoint("TOPRIGHT", Minimap, "TOPLEFT", -10, 0)
+
+    -- objective tracker
+    local ObjectiveTrackerFrame_OnEventHook = function()
+      ObjectiveTrackerFrame:ClearAllPoints()
+      ObjectiveTrackerFrame:SetPoint("TOPRIGHT", Minimap, "BOTTOMRIGHT", -30, -50)
+      ObjectiveTrackerFrame.SetPoint = function() end
+    end
+    ObjectiveTrackerFrame:HookScript("OnEvent", ObjectiveTrackerFrame_OnEventHook)
   end
 end
 
