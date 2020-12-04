@@ -19,15 +19,17 @@ GarrisonLandingPageMinimapButton:SetHeight(32)
 GarrisonLandingPageMinimapButton:SetPoint("BOTTOMLEFT", Minimap, "BOTTOMLEFT", 0, 0)
 
 -- mbb
-function MBB_SetButtonPosition()
-  MBB_MinimapButtonFrame:ClearAllPoints()
-  MBB_MinimapButtonFrame:SetWidth(32)
-  MBB_MinimapButtonFrame:SetHeight(32)
-  MBB_MinimapButtonFrame:SetPoint("BOTTOMRIGHT", Minimap, "BOTTOMRIGHT", 0, 0)
-end
+if MBB_MinimapButtonFrame then
+  function MBB_SetButtonPosition()
+    MBB_MinimapButtonFrame:ClearAllPoints()
+    MBB_MinimapButtonFrame:SetWidth(32)
+    MBB_MinimapButtonFrame:SetHeight(32)
+    MBB_MinimapButtonFrame:SetPoint("BOTTOMRIGHT", Minimap, "BOTTOMRIGHT", 0, 0)
+  end
 
-local _, border = MBB_MinimapButtonFrame:GetRegions()
-border:Hide()
+  local _, border = MBB_MinimapButtonFrame:GetRegions()
+  border:Hide()
+end
 
 -- mail
 MiniMapMailFrame:ClearAllPoints()
