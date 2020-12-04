@@ -2,7 +2,7 @@
 -- CHAT --
 ----------
 
-local nastyeUIChatVer = 3
+local nastyeUIChatVer = 4
 
 -- Check applied chat version on load and prompt update
 local frame = CreateFrame("FRAME")
@@ -90,6 +90,12 @@ function fixchat()
   ChatFrame_RemoveAllChannels(ChatFrame3)
   ChatFrame_RemoveAllMessageGroups(ChatFrame4)
   ChatFrame_RemoveAllChannels(ChatFrame4)
+
+  -- Make sure were in all the right channels
+  JoinChannelByName("General")
+  JoinChannelByName("Trade")
+  JoinChannelByName("LocalDefense")
+  JoinChannelByName("LookingForGroup")
 
   -- Setup 'General' --
   ChatFrame_AddChannel(ChatFrame1, "General")
