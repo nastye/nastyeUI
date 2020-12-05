@@ -6,12 +6,12 @@ MiniMapTracking:ClearAllPoints()
 MiniMapTracking:SetPoint("BOTTOMLEFT", Minimap, "BOTTOMLEFT", 0, 0)
 MiniMapTracking.SetPoint = function() end
 
-local Minimap_OnClick = function(self, button)
-  if button == "LeftButton" then end
+Minimap_LeftClick = Minimap_OnClick
+Minimap_OnClick = function(self, button)
+  if button == "LeftButton" then Minimap_LeftClick(self, button) end
   if button == "RightButton" then MiniMapTracking_OnMouseDown() end
   if button == "MiddleButton" then if not Calendar_Toggle then Calendar_LoadUI() end Calendar_Toggle() end
 end
-Minimap:SetScript("OnMouseUp", Minimap_OnClick)
 
 GarrisonLandingPageMinimapButton:ClearAllPoints()
 GarrisonLandingPageMinimapButton:SetWidth(32) 
