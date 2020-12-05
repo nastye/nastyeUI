@@ -1,3 +1,16 @@
+-- BOTTOM LEFT CHAT PANEL
+local MinimapBorder = CreateFrame("FRAME", "MinimapBorder", Minimap, BackdropTemplateMixin and "BackdropTemplate")
+MinimapBorder:SetPoint("TOPLEFT", Minimap, "TOPLEFT", -1, 1)
+MinimapBorder:SetPoint("BOTTOMRIGHT", Minimap, "BOTTOMRIGHT", 1, -1)
+MinimapBorder:SetBackdrop({bgFile = "Interface\\Buttons\\WHITE8x8", --"Interface/Tooltips/UI-Tooltip-Background", 
+                        edgeFile = "Interface\\Buttons\\WHITE8x8", --"Interface/Tooltips/UI-Tooltip-Border", 
+                        tile = false, 
+                        tileSize = 16,
+                        edgeSize = 1, 
+                        insets = { left = 0, right = 0, top = 0, bottom = 0 }});
+MinimapBorder:SetBackdropBorderColor(0, 0, 0, 1)
+MinimapBorder:SetFrameLevel(MinimapBorder:GetParent():GetFrameLevel() - 1)
+
 Minimap:ClearAllPoints()
 Minimap:SetPoint("TOPRIGHT", UIParent, "TOPRIGHT", -5, -5)
 
@@ -52,17 +65,6 @@ QueueStatusMinimapButton:oSetPoint("LEFT", Minimap, "LEFT", 0, 0)
 
 local border = QueueStatusMinimapButton:GetRegions()
 border:Hide()
-
-    -- Check applied chat version on load and prompt update
---local frame = CreateFrame("FRAME")
---frame:RegisterEvent("PLAYER_LOGIN")
-
---function frame:OnEvent(event, arg1)
---  if event == "PLAYER_LOGIN" then
---   end
--- end
-
--- frame:SetScript("OnEvent", frame.OnEvent)
 
 -------------------------
 -- DEBUGGING FUNCTIONS -- 
