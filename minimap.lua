@@ -53,10 +53,6 @@ QueueStatusMinimapButton:oSetPoint("LEFT", Minimap, "LEFT", 0, 0)
 local border = QueueStatusMinimapButton:GetRegions()
 border:Hide()
 
-BuffFrame:ClearAllPoints()
-BuffFrame:SetPoint("TOPRIGHT", Minimap, "TOPLEFT", -10, 0)
-
-
     -- Check applied chat version on load and prompt update
 --local frame = CreateFrame("FRAME")
 --frame:RegisterEvent("PLAYER_LOGIN")

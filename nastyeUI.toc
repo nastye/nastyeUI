@@ -8,4 +8,5 @@ panels.lua
 chat.lua
 delete.lua
 minimap.lua
+buffs.lua
 tooltip.lua
