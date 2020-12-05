@@ -1,4 +1,4 @@
--- BOTTOM LEFT CHAT PANEL
+-- Minimap Border Frame
 local MinimapBorder = CreateFrame("FRAME", "MinimapBorder", Minimap, BackdropTemplateMixin and "BackdropTemplate")
 MinimapBorder:SetPoint("TOPLEFT", Minimap, "TOPLEFT", -1, 1)
 MinimapBorder:SetPoint("BOTTOMRIGHT", Minimap, "BOTTOMRIGHT", 1, -1)
@@ -11,14 +11,16 @@ MinimapBorder:SetBackdrop({bgFile = "Interface\\Buttons\\WHITE8x8", --"Interface
 MinimapBorder:SetBackdropBorderColor(0, 0, 0, 1)
 MinimapBorder:SetFrameLevel(MinimapBorder:GetParent():GetFrameLevel() - 1)
 
+-- Move Minimap
 Minimap:ClearAllPoints()
 Minimap:SetPoint("TOPRIGHT", UIParent, "TOPRIGHT", -5, -5)
 
--- minimap tracking dropdown
+-- Move Minimap Tracking Dropdown
 MiniMapTracking:ClearAllPoints()
 MiniMapTracking:SetPoint("BOTTOMLEFT", Minimap, "BOTTOMLEFT", 0, 0)
 MiniMapTracking.SetPoint = function() end
 
+-- Overwrite Minimap Click Behavior
 Minimap_LeftClick = Minimap_OnClick
 Minimap_OnClick = function(self, button)
   if button == "LeftButton" then Minimap_LeftClick(self, button) end
@@ -26,12 +28,13 @@ Minimap_OnClick = function(self, button)
   if button == "MiddleButton" then if not Calendar_Toggle then Calendar_LoadUI() end Calendar_Toggle() end
 end
 
+-- Move Garrison/Covenant Button
 GarrisonLandingPageMinimapButton:ClearAllPoints()
 GarrisonLandingPageMinimapButton:SetWidth(32) 
 GarrisonLandingPageMinimapButton:SetHeight(32)
 GarrisonLandingPageMinimapButton:SetPoint("BOTTOMLEFT", Minimap, "BOTTOMLEFT", 0, 0)
 
--- mbb
+-- Move MBB Button
 if MBB_MinimapButtonFrame then
   function MBB_SetButtonPosition()
     MBB_MinimapButtonFrame:ClearAllPoints()
@@ -44,7 +47,7 @@ if MBB_MinimapButtonFrame then
   border:Hide()
 end
 
--- mail
+-- Move Mail Button
 MiniMapMailFrame:ClearAllPoints()
 MiniMapMailFrame:SetWidth(32)
 MiniMapMailFrame:SetHeight(32)
@@ -55,7 +58,7 @@ MiniMapMailFrame:oSetPoint("RIGHT", Minimap, "RIGHT", 0, 0)
 local _, border = MiniMapMailFrame:GetRegions()
 border:Hide()
 
--- queue
+-- Move Groupfinder Button
 QueueStatusMinimapButton:ClearAllPoints()
 QueueStatusMinimapButton:SetWidth(32)
 QueueStatusMinimapButton:SetHeight(32)
