@@ -2,7 +2,7 @@
 ## Title: nastyeUI
 ## Version: 0.0.1
 ## SavedVariablesPerCharacter: lastAppliedChatVer
-## OptionalDeps: SexyMap
+## OptionalDeps: SexyMap, MBB
 cvars.lua
 panels.lua
 chat.lua
