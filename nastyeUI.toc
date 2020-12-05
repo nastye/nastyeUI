@@ -3,8 +3,9 @@
 ## Version: 0.0.1
 ## SavedVariablesPerCharacter: lastAppliedChatVer
 ## OptionalDeps: SexyMap
-chat.lua
 cvars.lua
+panels.lua
+chat.lua
 delete.lua
 minimap.lua
 tooltip.lua
