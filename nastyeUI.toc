@@ -8,6 +8,7 @@ cvars.lua
 panels.lua
 chat.lua
 delete.lua
+sexymap.lua
 minimap.lua
 buffs.lua
 tooltip.lua
