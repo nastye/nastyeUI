@@ -1,7 +1,7 @@
 ## Interface:
 ## Title: nastyeUI
 ## Version: 0.0.1
-## SavedVariablesPerCharacter: nastyeUISaved
+## SavedVariablesPerCharacter: nastyeUIDB
 ## OptionalDeps: SexyMap, MBB, Dominos
 SavedVariables.lua
 CVars.lua

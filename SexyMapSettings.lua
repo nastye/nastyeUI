@@ -3,7 +3,7 @@ nastyeUI_SexyMapSettings = function()
 
   local characterString = GetUnitName("player", false) .. "-" .. GetRealmName()
 
-  if (nastyeUISaved.sexyMapAskedOnce == false) and (not SexyMap2DB[characterString] or SexyMap2DB[characterString] ~= "nastyeUI") then
+  if (nastyeUIDB.sexyMapAskedOnce == false) and (not SexyMap2DB[characterString] or SexyMap2DB[characterString] ~= "nastyeUI") then
     StaticPopupDialogs["NASTYE_UI_SET_SEXYMAP_PROFILE"] = {
       text = "Set nastyeUI SexyMap Profile for this character? Current profile will be backed up",
       button1 = "Yes",
@@ -11,11 +11,11 @@ nastyeUI_SexyMapSettings = function()
       OnAccept = function()
         SexyMap2DB[characterString.."-Backup"] = SexyMap2DB[characterString]
         SexyMap2DB[characterString] = "nastyeUI"
-        nastyeUISaved.sexyMapAskedOnce = true
+        nastyeUIDB.sexyMapAskedOnce = true
         ReloadUI()
       end,
       OnCancel = function()
-        nastyeUISaved.sexyMapAskedOnce = true
+        nastyeUIDB.sexyMapAskedOnce = true
       end,
       timeout = 0,
       whileDead = true,
