@@ -4,11 +4,11 @@
 ## SavedVariablesPerCharacter: nastyeUISaved
 ## OptionalDeps: SexyMap, MBB
 SavedVariables.lua
-cvars.lua
-panels.lua
-chat.lua
-delete.lua
-sexymap.lua
-minimap.lua
-buffs.lua
-tooltip.lua
+CVars.lua
+Panels.lua
+Chat.lua
+EasyDelete.lua
+SexyMapSettings.lua
+Minimap.lua
+Buffs.lua
+Tooltip.lua
