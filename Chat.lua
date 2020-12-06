@@ -16,7 +16,7 @@ function frame:OnEvent(event, arg1)
         button1 = "Yes",
         button2 = "No",
         OnAccept = function()
-          fixchat()
+          nastyeUI_FixChat()
           ReloadUI() 
         end,
         timeout = 0,
@@ -33,7 +33,7 @@ frame:SetScript("OnEvent", frame.OnEvent)
 
 -- add slash command for manual fixing
 SLASH_FIXCHAT1 = "/fixchat"
-SlashCmdList["FIXCHAT"] = function() fixchat() ReloadUI() end
+SlashCmdList["FIXCHAT"] = function() nastyeUI_FixChat() ReloadUI() end
 
 -- disable chat fade for all frames
 for i=1,7 do _G["ChatFrame"..i]:SetFading(false) end
@@ -43,7 +43,7 @@ ChatFrame1EditBox:SetPoint("TOPLEFT", ChatFrame1, "BOTTOMLEFT", -2, 1)
 
 
 -- actual code to fix
-function fixchat()
+function nastyeUI_FixChat()
   FCF_ResetChatWindows()
   DEFAULT_CHATFRAME_ALPHA = 0
 
