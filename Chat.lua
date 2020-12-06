@@ -10,7 +10,7 @@ frame:RegisterEvent("ADDON_LOADED")
 
 function frame:OnEvent(event, arg1)
   if event == "ADDON_LOADED" and arg1 == "nastyeUI" then
-    if (not nastyeUIDBstAppliedChatVer) or (nastyeUIChatVer > nasnastyeUIDBppliedChatVer) then
+    if (nastyeUIChatVer > nastyeUIDB.lastAppliedChatVer) then
       StaticPopupDialogs["NASTYE_UI_FIX_CHAT"] = {
         text = "Newer chat version " .. nastyeUIChatVer .. " available.\nI fix?",
         button1 = "Yes",
@@ -164,5 +164,5 @@ function fixchat()
   
   FCF_SavePositionAndDimensions(ChatFrame1)
 
-  nastyeUIDBstAppliedChatVer = nastyeUIChatVer
+  nastyeUIDB.lastAppliedChatVer = nastyeUIChatVer
 end
