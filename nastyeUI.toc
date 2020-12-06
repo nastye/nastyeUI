@@ -11,4 +11,4 @@ EasyDelete.lua
 SexyMapSettings.lua
 Minimap.lua
 Buffs.lua
-Tooltip.lua
+Tooltips.lua
