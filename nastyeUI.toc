@@ -1,8 +1,9 @@
 ## Interface:
 ## Title: nastyeUI
 ## Version: 0.0.1
-## SavedVariablesPerCharacter: lastAppliedChatVer
+## SavedVariablesPerCharacter: nastyeUISaved
 ## OptionalDeps: SexyMap, MBB
+SavedVariables.lua
 cvars.lua
 panels.lua
 chat.lua
