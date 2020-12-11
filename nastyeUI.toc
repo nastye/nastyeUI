@@ -2,7 +2,7 @@
 ## Title: nastyeUI
 ## Version: 0.0.1
 ## SavedVariablesPerCharacter: nastyeUIDB
-## OptionalDeps: SexyMap, MBB, Dominos
+## OptionalDeps: SexyMap, MBB, Dominos, Details
 SavedVariables.lua
 CVars.lua
 Panels.lua
@@ -10,6 +10,7 @@ Chat.lua
 EasyDelete.lua
 SexyMapSettings.lua
 DominosSettings.lua
+Details.lua
 Minimap.lua
 Buffs.lua
 Tooltips.lua
