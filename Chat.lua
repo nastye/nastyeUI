@@ -2,7 +2,7 @@
 -- CHAT --
 ----------
 
-local nastyeUIChatVer = 4
+local nastyeUIChatVer = 6
 
 -- Check applied chat version on load and prompt update
 local frame = CreateFrame("FRAME")
@@ -39,7 +39,7 @@ SlashCmdList["FIXCHAT"] = function() nastyeUI_FixChat() ReloadUI() end
 for i=1,7 do _G["ChatFrame"..i]:SetFading(false) end
 
 -- fine tune positioning of edit box
-ChatFrame1EditBox:SetPoint("TOPLEFT", ChatFrame1, "BOTTOMLEFT", -2, 1)
+ChatFrame1EditBox:SetAllPoints(DataTextPanel) --("TOPLEFT", ChatFrame1, "BOTTOMLEFT", -2, 1)
 
 
 -- actual code to fix
@@ -53,9 +53,10 @@ function nastyeUI_FixChat()
   FCF_OpenNewWindow("SPAM")
 
   ChatFrame1:ClearAllPoints()
-  ChatFrame1:SetPoint("BOTTOMLEFT", UIParent, "BOTTOMLEFT", 2, 30)
-  ChatFrame1:SetWidth(404)
-  ChatFrame1:SetHeight(168)
+  ChatFrame1:SetPoint("TOPLEFT", ChatPanel, "TOPLEFT", 1, -1)
+  ChatFrame1:SetPoint("BOTTOMRIGHT", DataTextPanel, "TOPRIGHT", -2, 1)
+  -- ChatFrame1:SetWidth(404)
+  -- ChatFrame1:SetHeight(168)
   ChatFrame1:SetUserPlaced(true)
 
   -- Font Size --

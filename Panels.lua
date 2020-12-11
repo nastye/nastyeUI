@@ -1,6 +1,6 @@
 -- BOTTOM LEFT CHAT PANEL
 local ChatPanel = CreateFrame("FRAME", "ChatPanel", UIParent, BackdropTemplateMixin and "BackdropTemplate")
-ChatPanel:SetPoint("BOTTOMLEFT")
+ChatPanel:SetPoint("BOTTOMLEFT", 5, 5)
 ChatPanel:SetWidth(430)
 ChatPanel:SetHeight(200)
 ChatPanel:SetBackdrop({bgFile = "Interface\\Buttons\\WHITE8x8", --"Interface/Tooltips/UI-Tooltip-Background", 
