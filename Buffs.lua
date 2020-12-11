@@ -1,6 +1,6 @@
 local moveBuffs = function()
   BuffFrame:ClearAllPoints()
-  BuffFrame:SetPoint("TOPRIGHT", Minimap, "TOPLEFT", -11, 0)
+  BuffFrame:SetPoint("TOPRIGHT", Minimap, "TOPLEFT", -5, 1)
 
   -- if DebuffButton1 then
   --   DebuffButton1:ClearAllPoints()
