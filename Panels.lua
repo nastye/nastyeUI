@@ -10,7 +10,8 @@ ChatPanel:SetBackdrop({bgFile = "Interface\\Buttons\\WHITE8x8", --"Interface/Too
                         edgeSize = 1, 
                         insets = { left = 0, right = 0, top = 0, bottom = 0 }});
 ChatPanel:SetBackdropColor(26/255, 26/255, 26/255, 1)
-ChatPanel:SetBackdropBorderColor(0, 0, 0, 1)
+ChatPanel:SetBackdropBorderColor(nastyeUI_ClassColor.r, nastyeUI_ClassColor.g, nastyeUI_ClassColor.b, 1)
+-- ChatPanel:SetBackdropBorderColor(0, 0, 0, 1)
 ChatPanel:SetFrameStrata("BACKGROUND")
 ChatPanel:SetFrameLevel(0)
 
@@ -26,6 +27,7 @@ DataTextPanel:SetBackdrop({bgFile = "Interface\\Buttons\\WHITE8x8", --"Interface
                         edgeSize = 1, 
                         insets = { left = 0, right = 0, top = 0, bottom = 0 }});
 DataTextPanel:SetBackdropColor(26/255, 26/255, 26/255, 1)
-DataTextPanel:SetBackdropBorderColor(0, 0, 0, 1)
+DataTextPanel:SetBackdropBorderColor(nastyeUI_ClassColor.r, nastyeUI_ClassColor.g, nastyeUI_ClassColor.b, 1)
+-- DataTextPanel:SetBackdropBorderColor(0, 0, 0, 1)
 DataTextPanel:SetFrameStrata("BACKGROUND")
 DataTextPanel:SetFrameLevel(DataTextPanel:GetParent():GetFrameLevel() + 1)
