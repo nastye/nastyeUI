@@ -8,8 +8,8 @@ MinimapBorder:SetBackdrop({bgFile = "Interface\\Buttons\\WHITE8x8", --"Interface
                         tileSize = 16,
                         edgeSize = 1, 
                         insets = { left = 0, right = 0, top = 0, bottom = 0 }});
-MinimapBorder:SetBackdropBorderColor(0, 0, 0, 1)
-MinimapBorder:SetBackdropBorderColor(nastyeUI_ClassColor.r, nastyeUI_ClassColor.g, nastyeUI_ClassColor.b, 1)
+MinimapBorder:SetBackdropColor(nastyeUI_PanelBackDropColor.r, nastyeUI_PanelBackDropColor.g, nastyeUI_PanelBackDropColor.b, nastyeUI_PanelBackDropColor.alpha)
+MinimapBorder:SetBackdropBorderColor(nastyeUI_ClassColor.r, nastyeUI_ClassColor.g, nastyeUI_ClassColor.b, nastyeUI_ClassColor.alpha)
 MinimapBorder:SetFrameLevel(MinimapBorder:GetParent():GetFrameLevel() - 1)
 
 -- Move Minimap
