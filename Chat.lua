@@ -2,7 +2,7 @@
 -- CHAT --
 ----------
 
-local nastyeUIChatVer = 6
+local nastyeUIChatVer = 7
 
 -- Check applied chat version on load and prompt update
 local frame = CreateFrame("FRAME")
@@ -99,7 +99,7 @@ function nastyeUI_FixChat()
   JoinChannelByName("LookingForGroup")
 
   -- Setup 'General' --
-  ChatFrame_AddChannel(ChatFrame1, "General")
+  -- ChatFrame_AddChannel(ChatFrame1, "General")
 
   ChatFrame_AddMessageGroup(ChatFrame1, "SYSTEM")
   ChatFrame_AddMessageGroup(ChatFrame1, "SYSTEM_NOMENU")
