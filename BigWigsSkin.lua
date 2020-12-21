@@ -11,6 +11,9 @@ local backdrop = {
 BigWigsAPI:RegisterBarStyle("nastyeUI", {
   apiVersion = 1,
   version = 1,
+  fontSizeNormal = 12,
+  fontSizeEmphasized = 14,
+  barSpacing = 3,
   ApplyStyle = function(bar)
     local bd = bar.candyBarBackdrop
     bd:SetBackdrop(backdrop)
@@ -23,6 +26,8 @@ BigWigsAPI:RegisterBarStyle("nastyeUI", {
     bd:Show()
   end,
   BarStopped = function(bar)
+		local bd = bar.candyBarBackdrop
+		bd:Hide()
   end,
   GetStyleName = function() return "nastyeUI" end
 })
