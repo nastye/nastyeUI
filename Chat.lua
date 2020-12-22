@@ -2,13 +2,13 @@
 -- CHAT --
 ----------
 
-local nastyeUIChatVer = 7
+local nastyeUIChatVer = 8
 
 -- Check applied chat version on load and prompt update
 local frame = CreateFrame("FRAME")
 frame:RegisterEvent("ADDON_LOADED")
 
-function frame:OnEvent(event, arg1)
+frame.OnEvent = function(event, arg1)
   if event == "ADDON_LOADED" and arg1 == "nastyeUI" then
     if (nastyeUIChatVer > nastyeUIDB.lastAppliedChatVer) then
       StaticPopupDialogs["NASTYE_UI_FIX_CHAT"] = {
@@ -35,15 +35,17 @@ frame:SetScript("OnEvent", frame.OnEvent)
 SLASH_FIXCHAT1 = "/fixchat"
 SlashCmdList["FIXCHAT"] = function() nastyeUI_FixChat() ReloadUI() end
 
+
 -- disable chat fade for all frames
 for i=1,7 do _G["ChatFrame"..i]:SetFading(false) end
 
--- fine tune positioning of edit box
-ChatFrame1EditBox:SetAllPoints(DataTextPanel) --("TOPLEFT", ChatFrame1, "BOTTOMLEFT", -2, 1)
-
+FCF_RestorePositionAndDimensions(ChatFrame1)
+-- fine tune positioning of chat frame
+ChatFrame1EditBox:ClearAllPoints()
+ChatFrame1EditBox:SetAllPoints(nastyeUI_DataTextPanel)
 
 -- actual code to fix
-function nastyeUI_FixChat()
+nastyeUI_FixChat = function()
   FCF_ResetChatWindows()
   DEFAULT_CHATFRAME_ALPHA = 0
 
@@ -53,14 +55,12 @@ function nastyeUI_FixChat()
   FCF_OpenNewWindow("SPAM")
 
   ChatFrame1:ClearAllPoints()
-  ChatFrame1:SetPoint("TOPLEFT", ChatPanel, "TOPLEFT", 1, -1)
-  ChatFrame1:SetPoint("BOTTOMRIGHT", DataTextPanel, "TOPRIGHT", -2, 1)
-  -- ChatFrame1:SetWidth(404)
-  -- ChatFrame1:SetHeight(168)
+  ChatFrame1:SetPoint("TOPLEFT", nastyeUI_ChatPanel, "TOPLEFT", 2, -2)
+  ChatFrame1:SetPoint("BOTTOMRIGHT", nastyeUI_DataTextPanel, "TOPRIGHT", -2, 2)
   ChatFrame1:SetUserPlaced(true)
 
   -- Font Size --
-  local fontsize = 12
+  local fontsize = 14
   FCF_SetChatWindowFontSize(self, ChatFrame1, fontsize)
   FCF_SetChatWindowFontSize(self, ChatFrame2, fontsize)
   FCF_SetChatWindowFontSize(self, ChatFrame3, fontsize)
