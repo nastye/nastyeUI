@@ -8,7 +8,7 @@ local nastyeUIChatVer = 8
 local frame = CreateFrame("FRAME")
 frame:RegisterEvent("ADDON_LOADED")
 
-frame.OnEvent = function(event, arg1)
+nastyeUI_ChatOnLoad = function(self, event, arg1)
   if event == "ADDON_LOADED" and arg1 == "nastyeUI" then
     if (nastyeUIChatVer > nastyeUIDB.lastAppliedChatVer) then
       StaticPopupDialogs["NASTYE_UI_FIX_CHAT"] = {
@@ -29,17 +29,15 @@ frame.OnEvent = function(event, arg1)
   end
 end
 
-frame:SetScript("OnEvent", frame.OnEvent)
+frame:SetScript("OnEvent", nastyeUI_ChatOnLoad)
 
 -- add slash command for manual fixing
 SLASH_FIXCHAT1 = "/fixchat"
 SlashCmdList["FIXCHAT"] = function() nastyeUI_FixChat() ReloadUI() end
 
-
 -- disable chat fade for all frames
 for i=1,7 do _G["ChatFrame"..i]:SetFading(false) end
 
-FCF_RestorePositionAndDimensions(ChatFrame1)
 -- fine tune positioning of chat frame
 ChatFrame1EditBox:ClearAllPoints()
 ChatFrame1EditBox:SetAllPoints(nastyeUI_DataTextPanel)
