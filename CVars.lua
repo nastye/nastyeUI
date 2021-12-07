@@ -13,18 +13,19 @@ setCVars = function()
   -- NAMEPLATES --
   ----------------
 
-  SetCVar("nameplateOverlapV", "1.2")
+  SetCVar("nameplateOverlapV", "1.6")
   SetCVar("nameplateOverlapH", "1.2")
   SetCVar("nameplateLargeTopInset", "0.05")
   SetCVar("nameplateLargeBottomInset", "0.1")
   SetCVar("nameplateOtherTopInset", "0.05")
   SetCVar("nameplateOtherBottomInset", "0.1")
+  SetCVar("nameplateMaxDistance", "60")
 
   ----------------
   -- SPELLQUEUE --
   ----------------
 
-  SetCVar("SpellQueueWindow", "200")
+  SetCVar("SpellQueueWindow", "100")
 
   --------------------------
   -- FLOATING COMBAT TEXT --
@@ -32,6 +33,10 @@ setCVars = function()
 
   SetCVar("floatingCombatTextCombatDamage", 1)
   SetCVar("floatingCombatTextCombatHealing", 1)
+
+  SetCVar("whisperMode", "popout_and_inline")
+
+  SetConsoleKey(nil);
 end
 
 
