@@ -2,7 +2,7 @@
 -- CHAT --
 ----------
 
-local nastyeUIChatVer = 8
+local nastyeUIChatVer = 9
 
 -- Check applied chat version on load and prompt update
 local frame = CreateFrame("FRAME")
@@ -34,13 +34,15 @@ frame:SetScript("OnEvent", nastyeUI_ChatOnLoad)
 -- add slash command for manual fixing
 SLASH_FIXCHAT1 = "/fixchat"
 SlashCmdList["FIXCHAT"] = function() nastyeUI_FixChat() ReloadUI() end
+SLASH_CLEAR1 = "/clear"
+SlashCmdList["CLEAR"] = function() SELECTED_CHAT_FRAME:Clear() end
 
 -- disable chat fade for all frames
-for i=1,7 do _G["ChatFrame"..i]:SetFading(false) end
+-- for i=1,7 do _G["ChatFrame"..i]:SetFading(false) end
 
 -- fine tune positioning of chat frame
-ChatFrame1EditBox:ClearAllPoints()
-ChatFrame1EditBox:SetAllPoints(nastyeUI_DataTextPanel)
+-- ChatFrame1EditBox:ClearAllPoints()
+-- ChatFrame1EditBox:SetAllPoints(nastyeUI_DataTextPanel)
 
 -- actual code to fix
 nastyeUI_FixChat = function()
@@ -52,10 +54,10 @@ nastyeUI_FixChat = function()
   FCF_OpenNewWindow("LOOT")
   FCF_OpenNewWindow("SPAM")
 
-  ChatFrame1:ClearAllPoints()
-  ChatFrame1:SetPoint("TOPLEFT", nastyeUI_ChatPanel, "TOPLEFT", 2, -2)
-  ChatFrame1:SetPoint("BOTTOMRIGHT", nastyeUI_DataTextPanel, "TOPRIGHT", -2, 2)
-  ChatFrame1:SetUserPlaced(true)
+  -- ChatFrame1:ClearAllPoints()
+  -- ChatFrame1:SetPoint("TOPLEFT", nastyeUI_ChatPanel, "TOPLEFT", 2, -2)
+  -- ChatFrame1:SetPoint("BOTTOMRIGHT", nastyeUI_DataTextPanel, "TOPRIGHT", -2, 2)
+  -- ChatFrame1:SetUserPlaced(true)
 
   -- Font Size --
   local fontsize = 14
@@ -65,20 +67,20 @@ nastyeUI_FixChat = function()
   FCF_SetChatWindowFontSize(self, ChatFrame4, fontsize)
   
   -- Chat Window Alpha --
-  local alpha = 0
-  FCF_SetWindowAlpha(ChatFrame1, alpha)
-  FCF_SetWindowAlpha(ChatFrame2, alpha)
-  FCF_SetWindowAlpha(ChatFrame3, alpha)
-  FCF_SetWindowAlpha(ChatFrame4, alpha)
+  -- local alpha = 0
+  -- FCF_SetWindowAlpha(ChatFrame1, alpha)
+  -- FCF_SetWindowAlpha(ChatFrame2, alpha)
+  -- FCF_SetWindowAlpha(ChatFrame3, alpha)
+  -- FCF_SetWindowAlpha(ChatFrame4, alpha)
 
   -- Chat Window Color --
-  local r = 0
-  local g = 0
-  local b = 0
-  FCF_SetWindowColor(ChatFrame1, r, g, b)
-  FCF_SetWindowColor(ChatFrame2, r, g, b)
-  FCF_SetWindowColor(ChatFrame3, r, g, b)
-  FCF_SetWindowColor(ChatFrame4, r, g, b)
+  -- local r = 0
+  -- local g = 0
+  -- local b = 0
+  -- FCF_SetWindowColor(ChatFrame1, r, g, b)
+  -- FCF_SetWindowColor(ChatFrame2, r, g, b)
+  -- FCF_SetWindowColor(ChatFrame3, r, g, b)
+  -- FCF_SetWindowColor(ChatFrame4, r, g, b)
 
   -- Reset all chat channels
   ChatFrame_RemoveAllMessageGroups(ChatFrame1)
@@ -161,7 +163,7 @@ nastyeUI_FixChat = function()
   ChatFrame_AddChannel(ChatFrame4, "LocalDefense")
   ChatFrame_AddChannel(ChatFrame4, "LookingForGroup")
   
-  FCF_SavePositionAndDimensions(ChatFrame1)
+  --FCF_SavePositionAndDimensions(ChatFrame1)
 
   nastyeUIDB.lastAppliedChatVer = nastyeUIChatVer
 end
