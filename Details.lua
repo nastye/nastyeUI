@@ -11,7 +11,7 @@ Details2Border:SetBackdrop({bgFile = "Interface\\Buttons\\WHITE8x8", --"Interfac
                         insets = { left = 0, right = 0, top = 0, bottom = 0 }});
 -- Details2Border:SetBackdropBorderColor(0, 0, 0, 1)
 Details2Border:SetBackdropColor(nastyeUI_PanelBackdropColor.r, nastyeUI_PanelBackdropColor.g, nastyeUI_PanelBackdropColor.b, nastyeUI_PanelBackdropColor.alpha) 
-Details2Border:SetBackdropBorderColor(nastyeUI_ClassColor.r, nastyeUI_ClassColor.g, nastyeUI_ClassColor.b, nastyeUI_ClassColor.alpha)
+-- Details2Border:SetBackdropBorderColor(nastyeUI_ClassColor.r, nastyeUI_ClassColor.g, nastyeUI_ClassColor.b, nastyeUI_ClassColor.alpha)
 Details2Border:SetFrameLevel(Details2Border:GetParent():GetFrameLevel() - 1)
 
 local Details2Border = CreateFrame("FRAME", "Details2Border", Details_WindowFrame2, BackdropTemplateMixin and "BackdropTemplate")
@@ -25,5 +25,5 @@ Details2Border:SetBackdrop({bgFile = "Interface\\Buttons\\WHITE8x8", --"Interfac
                         insets = { left = 0, right = 0, top = 0, bottom = 0 }});
 -- Details2Border:SetBackdropBorderColor(0, 0, 0, 1)
 Details2Border:SetBackdropColor(nastyeUI_PanelBackdropColor.r, nastyeUI_PanelBackdropColor.g, nastyeUI_PanelBackdropColor.b, nastyeUI_PanelBackdropColor.alpha) 
-Details2Border:SetBackdropBorderColor(nastyeUI_ClassColor.r, nastyeUI_ClassColor.g, nastyeUI_ClassColor.b, nastyeUI_ClassColor.alpha)
+-- Details2Border:SetBackdropBorderColor(nastyeUI_ClassColor.r, nastyeUI_ClassColor.g, nastyeUI_ClassColor.b, nastyeUI_ClassColor.alpha)
 Details2Border:SetFrameLevel(Details2Border:GetParent():GetFrameLevel() - 1)
