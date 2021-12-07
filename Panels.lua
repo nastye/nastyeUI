@@ -32,3 +32,19 @@ nastyeUI_ChatPanel:SetBackdropColor(nastyeUI_PanelBackdropColor.r, nastyeUI_Pane
 nastyeUI_ChatPanel:SetBackdropBorderColor(nastyeUI_ClassColor.r, nastyeUI_ClassColor.g, nastyeUI_ClassColor.b, nastyeUI_ClassColor.alpha)
 nastyeUI_ChatPanel:SetFrameStrata("BACKGROUND")
 nastyeUI_ChatPanel:SetFrameLevel(0)
+
+-- -- ChatTabBackgroundPanel
+-- local nastyeUI_ChatTabPanel = CreateFrame("FRAME", "nastyeUI_ChatTabPanel", UIParent, BackdropTemplateMixin and "BackdropTemplate")
+-- nastyeUI_ChatTabPanel:SetPoint("BOTTOMLEFT", nastyeUI_ChatPanel, "TOPLEFT", 0, 0)
+-- nastyeUI_ChatTabPanel:SetPoint("BOTTOMRIGHT", nastyeUI_ChatPanel, "TOPRIGHT", 0, 0)
+-- nastyeUI_ChatTabPanel:SetHeight(30)
+-- nastyeUI_ChatTabPanel:SetBackdrop({bgFile = "Interface\\Buttons\\WHITE8x8", --"Interface/Tooltips/UI-Tooltip-Background", 
+--                         edgeFile = "Interface\\Buttons\\WHITE8x8", --"Interface/Tooltips/UI-Tooltip-Border", 
+--                         tile = false, 
+--                         tileSize = 16,
+--                         edgeSize = 1, 
+--                         insets = { left = 0, right = 0, top = 0, bottom = 0 }});
+-- nastyeUI_ChatTabPanel:SetBackdropColor(nastyeUI_PanelBackdropColor.r, nastyeUI_PanelBackdropColor.g, nastyeUI_PanelBackdropColor.b, nastyeUI_PanelBackdropColor.alpha) 
+-- nastyeUI_ChatTabPanel:SetBackdropBorderColor(nastyeUI_ClassColor.r, nastyeUI_ClassColor.g, nastyeUI_ClassColor.b, nastyeUI_ClassColor.alpha)
+-- nastyeUI_ChatTabPanel:SetFrameStrata("BACKGROUND")
+-- nastyeUI_ChatTabPanel:SetFrameLevel(1)
