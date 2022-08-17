@@ -4,8 +4,9 @@
 ## SavedVariablesPerCharacter: nastyeUIDB
 ## OptionalDeps: SexyMap, MBB, Dominos, Details, BigWigs, WeakAuras2, ShadowedUnitFrames
 SavedVariables.lua
+UIScale.lua
 CVars.lua
 EasyDelete.lua
 BigWigsSkin.lua
-MBB.lua
 Chat.lua
+Moving.lua
