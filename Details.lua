@@ -1,5 +1,30 @@
 if not Details then return end
 
+local instance = Details:GetInstance(1)
+local pos_table = instance:CreatePositionTable()
+pos_table.w = 230
+pos_table.h = 66
+print(pos_table.w)
+print(pos_table.h)
+print(pos_table.scale)
+print(pos_table.point)
+instance:RestorePositionFromPositionTable(pos_table)
+
+local instance = Details:GetInstance(2)
+local pos_table = instance:CreatePositionTable()
+pos_table.w = 230
+pos_table.h = 175
+print(pos_table.w)
+print(pos_table.h)
+print(pos_table.scale)
+print(pos_table.point)
+instance:RestorePositionFromPositionTable(pos_table)
+
+DetailsBaseFrame1:ClearAllPoints()
+DetailsBaseFrame2:ClearAllPoints()
+DetailsBaseFrame1:SetPoint("BOTTOMRIGHT", UIParent, "BOTTOMRIGHT", -5, 5)
+DetailsBaseFrame2:SetPoint("BOTTOMRIGHT", DetailsBaseFrame1, "TOPRIGHT", 0, 2)
+
 local Details2Border = CreateFrame("FRAME", "Details2Border", Details_WindowFrame1, BackdropTemplateMixin and "BackdropTemplate")
 Details2Border:SetPoint("TOPLEFT", DetailsUpFrameLeftPart1, "TOPLEFT", -1, -2)
 Details2Border:SetPoint("BOTTOMRIGHT", Details_WindowFrame1, "BOTTOMRIGHT", 1, -1)
