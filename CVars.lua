@@ -17,7 +17,7 @@ setCVars = function()
   SetCVar("nameplateOverlapH", "1.2")
   SetCVar("nameplateLargeTopInset", "0.05")
   SetCVar("nameplateLargeBottomInset", "0.1")
-  SetCVar("nameplateOtherTopInset", "0.05")
+  SetCVar("nameplateOtherTopInset", "0.1")
   SetCVar("nameplateOtherBottomInset", "0.1")
   SetCVar("nameplateMaxDistance", "60")
 
@@ -31,8 +31,8 @@ setCVars = function()
   -- FLOATING COMBAT TEXT --
   --------------------------
 
-  SetCVar("floatingCombatTextCombatDamage", 1)
-  SetCVar("floatingCombatTextCombatHealing", 1)
+  SetCVar("floatingCombatTextCombatDamage", 0)
+  SetCVar("floatingCombatTextCombatHealing", 0)
 
   SetCVar("whisperMode", "popout_and_inline")
 
