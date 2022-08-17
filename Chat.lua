@@ -2,7 +2,7 @@
 -- CHAT --
 ----------
 
-local nastyeUIChatVer = 9
+local nastyeUIChatVer = 10
 
 -- Check applied chat version on load and prompt update
 local frame = CreateFrame("FRAME")
@@ -51,13 +51,14 @@ nastyeUI_FixChat = function()
 
   FCF_SetWindowName(ChatFrame1, "GENERAL")
   FCF_SetWindowName(ChatFrame2, "COMBAT")
+  FCF_Close(ChatFrame3)
   FCF_OpenNewWindow("LOOT")
   FCF_OpenNewWindow("SPAM")
 
-  -- ChatFrame1:ClearAllPoints()
-  -- ChatFrame1:SetPoint("TOPLEFT", nastyeUI_ChatPanel, "TOPLEFT", 2, -2)
-  -- ChatFrame1:SetPoint("BOTTOMRIGHT", nastyeUI_DataTextPanel, "TOPRIGHT", -2, 2)
-  -- ChatFrame1:SetUserPlaced(true)
+  ChatFrame1:ClearAllPoints()
+  ChatFrame1:SetPoint("TOPRIGHT", UIParent, "BOTTOMLEFT", 545, 235)
+  ChatFrame1:SetPoint("BOTTOMLEFT", UIParent, "BOTTOMLEFT", 5, 35)
+  ChatFrame1:SetUserPlaced(true)
 
   -- Font Size --
   local fontsize = 14
@@ -147,23 +148,25 @@ nastyeUI_FixChat = function()
   ChatFrame_AddMessageGroup(ChatFrame1, "INSTANCE_CHAT")
   ChatFrame_AddMessageGroup(ChatFrame1, "INSTANCE_CHAT_LEADER")
   ChatFrame_AddMessageGroup(ChatFrame1, "GUILD_ITEM_LOOTED")
+  ChatFrame_AddMessageGroup(ChatFrame1, "TARGETICONS")
 
   -- Setup 'Loot' --
-  ChatFrame_AddMessageGroup(ChatFrame3, "SKILL")
-  ChatFrame_AddMessageGroup(ChatFrame3, "LOOT")
-  ChatFrame_AddMessageGroup(ChatFrame3, "MONEY")
-  ChatFrame_AddMessageGroup(ChatFrame3, "CURRENCY")
-  ChatFrame_AddMessageGroup(ChatFrame3, "COMBAT_FACTION_CHANGE")
-  ChatFrame_AddMessageGroup(ChatFrame3, "COMBAT_HONOR_GAIN")
-  ChatFrame_AddMessageGroup(ChatFrame3, "COMBAT_XP_GAIN")
+  ChatFrame_AddMessageGroup(ChatFrame4, "SKILL")
+  ChatFrame_AddMessageGroup(ChatFrame4, "LOOT")
+  ChatFrame_AddMessageGroup(ChatFrame4, "MONEY")
+  ChatFrame_AddMessageGroup(ChatFrame4, "CURRENCY")
+  ChatFrame_AddMessageGroup(ChatFrame4, "COMBAT_FACTION_CHANGE")
+  ChatFrame_AddMessageGroup(ChatFrame4, "COMBAT_HONOR_GAIN")
+  ChatFrame_AddMessageGroup(ChatFrame4, "COMBAT_XP_GAIN")
 
   -- Setup 'SPAM' --
-  ChatFrame_AddChannel(ChatFrame4, "General")
-  ChatFrame_AddChannel(ChatFrame4, "Trade")
-  ChatFrame_AddChannel(ChatFrame4, "LocalDefense")
-  ChatFrame_AddChannel(ChatFrame4, "LookingForGroup")
+  ChatFrame_AddChannel(ChatFrame5, "General")
+  ChatFrame_AddChannel(ChatFrame5, "Trade")
+  ChatFrame_AddChannel(ChatFrame5, "Services")
+  ChatFrame_AddChannel(ChatFrame5, "LocalDefense")
+  ChatFrame_AddChannel(ChatFrame5, "LookingForGroup")
   
-  --FCF_SavePositionAndDimensions(ChatFrame1)
+  FCF_SavePositionAndDimensions(ChatFrame1)
 
   nastyeUIDB.lastAppliedChatVer = nastyeUIChatVer
 end
