@@ -27,6 +27,8 @@ nastyeUI_ChatOnLoad = function(self, event, arg1)
       StaticPopup_Show("NASTYE_UI_FIX_CHAT")
     end
   end
+  -- this is temporary while chat trade/services keep popping up in wrong tabs
+  nastyeUI_FixChat()
 end
 
 frame:SetScript("OnEvent", nastyeUI_ChatOnLoad)
@@ -51,21 +53,20 @@ nastyeUI_FixChat = function()
 
   FCF_SetWindowName(ChatFrame1, "GENERAL")
   FCF_SetWindowName(ChatFrame2, "COMBAT")
-  FCF_Close(ChatFrame3)
   FCF_OpenNewWindow("LOOT")
   FCF_OpenNewWindow("SPAM")
 
-  ChatFrame1:ClearAllPoints()
-  ChatFrame1:SetPoint("TOPRIGHT", UIParent, "BOTTOMLEFT", 545, 235)
-  ChatFrame1:SetPoint("BOTTOMLEFT", UIParent, "BOTTOMLEFT", 5, 35)
-  ChatFrame1:SetUserPlaced(true)
+  -- ChatFrame1:ClearAllPoints()
+  -- ChatFrame1:SetPoint("TOPRIGHT", UIParent, "BOTTOMLEFT", 545, 235)
+  -- ChatFrame1:SetPoint("BOTTOMLEFT", UIParent, "BOTTOMLEFT", 5, 35)
+  -- ChatFrame1:SetUserPlaced(true)
 
   -- Font Size --
-  local fontsize = 14
-  FCF_SetChatWindowFontSize(self, ChatFrame1, fontsize)
-  FCF_SetChatWindowFontSize(self, ChatFrame2, fontsize)
-  FCF_SetChatWindowFontSize(self, ChatFrame3, fontsize)
-  FCF_SetChatWindowFontSize(self, ChatFrame4, fontsize)
+  -- local fontsize = 14
+  -- FCF_SetChatWindowFontSize(self, ChatFrame1, fontsize)
+  -- FCF_SetChatWindowFontSize(self, ChatFrame2, fontsize)
+  -- FCF_SetChatWindowFontSize(self, ChatFrame3, fontsize)
+  -- FCF_SetChatWindowFontSize(self, ChatFrame4, fontsize)
   
   -- Chat Window Alpha --
   -- local alpha = 0
@@ -83,6 +84,13 @@ nastyeUI_FixChat = function()
   -- FCF_SetWindowColor(ChatFrame3, r, g, b)
   -- FCF_SetWindowColor(ChatFrame4, r, g, b)
 
+  -- Make sure were in all the right channels
+  JoinChannelByName("General")
+  JoinChannelByName("Trade")
+  JoinChannelByName("LocalDefense")
+  JoinChannelByName("LookingForGroup")
+  JoinChannelByName("Services")
+
   -- Reset all chat channels
   ChatFrame_RemoveAllMessageGroups(ChatFrame1)
   ChatFrame_RemoveAllChannels(ChatFrame1)	
@@ -93,15 +101,8 @@ nastyeUI_FixChat = function()
   ChatFrame_RemoveAllMessageGroups(ChatFrame4)
   ChatFrame_RemoveAllChannels(ChatFrame4)
 
-  -- Make sure were in all the right channels
-  JoinChannelByName("General")
-  JoinChannelByName("Trade")
-  JoinChannelByName("LocalDefense")
-  JoinChannelByName("LookingForGroup")
-
   -- Setup 'General' --
   -- ChatFrame_AddChannel(ChatFrame1, "General")
-
   ChatFrame_AddMessageGroup(ChatFrame1, "SYSTEM")
   ChatFrame_AddMessageGroup(ChatFrame1, "SYSTEM_NOMENU")
   ChatFrame_AddMessageGroup(ChatFrame1, "SAY")
@@ -150,7 +151,7 @@ nastyeUI_FixChat = function()
   ChatFrame_AddMessageGroup(ChatFrame1, "GUILD_ITEM_LOOTED")
   ChatFrame_AddMessageGroup(ChatFrame1, "TARGETICONS")
 
-  -- Setup 'Loot' --
+  -- Setup 'LOOT' --
   ChatFrame_AddMessageGroup(ChatFrame4, "SKILL")
   ChatFrame_AddMessageGroup(ChatFrame4, "LOOT")
   ChatFrame_AddMessageGroup(ChatFrame4, "MONEY")
@@ -166,7 +167,7 @@ nastyeUI_FixChat = function()
   ChatFrame_AddChannel(ChatFrame5, "LocalDefense")
   ChatFrame_AddChannel(ChatFrame5, "LookingForGroup")
   
-  FCF_SavePositionAndDimensions(ChatFrame1)
+  -- FCF_SavePositionAndDimensions(ChatFrame1)
 
   nastyeUIDB.lastAppliedChatVer = nastyeUIChatVer
 end
