@@ -1,4 +1,4 @@
-## Interface:
+## Interface: 100206
 ## Title: nastyeUI
 ## Version: 0.0.1
 ## SavedVariablesPerCharacter: nastyeUIDB
