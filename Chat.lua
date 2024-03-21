@@ -26,9 +26,8 @@ nastyeUI_ChatOnLoad = function(self, event, arg1)
       }
       StaticPopup_Show("NASTYE_UI_FIX_CHAT")
     end
-  -- this is temporary while chat trade/services keep popping up in wrong tabs
-  nastyeUI_FixChat()
-  self:UnregisterEvent("ADDON_LOADED")
+  -- this is temporary while trade/services keep popping up in wrong tabs
+  C_Timer.After(3, nastyeUI_FixChat)
   end
 end
 
@@ -50,7 +49,7 @@ SlashCmdList["CLEAR"] = function() SELECTED_CHAT_FRAME:Clear() end
 -- actual code to fix
 nastyeUI_FixChat = function()
   FCF_ResetChatWindows()
-  DEFAULT_CHATFRAME_ALPHA = 0
+  -- DEFAULT_CHATFRAME_ALPHA = 0
 
   FCF_SetWindowName(ChatFrame1, "GENERAL")
   FCF_SetWindowName(ChatFrame2, "COMBAT")
