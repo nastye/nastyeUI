@@ -3,7 +3,7 @@ scaler:RegisterEvent("VARIABLES_LOADED")
 scaler:RegisterEvent("UI_SCALE_CHANGED")
 scaler:SetScript("OnEvent", function(self, event)
 	if not InCombatLockdown() then
-		local scale = 768.0 / 1440.0
+		local scale = 768.0 / select(2, GetPhysicalScreenSize())
 		if scale < .64 then
 			UIParent:SetScale(scale)
 		else
