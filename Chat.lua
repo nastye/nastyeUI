@@ -26,9 +26,10 @@ nastyeUI_ChatOnLoad = function(self, event, arg1)
       }
       StaticPopup_Show("NASTYE_UI_FIX_CHAT")
     end
-  end
   -- this is temporary while chat trade/services keep popping up in wrong tabs
   nastyeUI_FixChat()
+  self:UnregisterEvent("ADDON_LOADED")
+  end
 end
 
 frame:SetScript("OnEvent", nastyeUI_ChatOnLoad)
