@@ -2,7 +2,7 @@
 ## Title: nastyeUI
 ## Version: 0.0.1
 ## SavedVariablesPerCharacter: nastyeUIDB
-## OptionalDeps: SexyMap, MBB, Dominos, Details, BigWigs, WeakAuras2, ShadowedUnitFrames
+## OptionalDeps: Details, BigWigs
 SavedVariables.lua
 UIScale.lua
 CVars.lua
