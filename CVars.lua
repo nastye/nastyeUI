@@ -13,19 +13,23 @@ setCVars = function()
   -- NAMEPLATES --
   ----------------
 
-  SetCVar("nameplateOverlapV", "1.6")
-  SetCVar("nameplateOverlapH", "1.2")
+  SetCVar("nameplateOverlapV", "1.8")
+  SetCVar("nameplateOverlapH", "1.1")
   SetCVar("nameplateLargeTopInset", "0.05")
   SetCVar("nameplateLargeBottomInset", "0.1")
   SetCVar("nameplateOtherTopInset", "0.1")
   SetCVar("nameplateOtherBottomInset", "0.1")
   SetCVar("nameplateMaxDistance", "60")
+  SetCVar("nameplateShowOnlyNames", "1")
+  -- This is already done in plater profile
+  -- Advanced > Friendly Nameplate Selection Box Size
+  -- C_NamePlate.SetNamePlateFriendlySize(80, 1)
 
   ----------------
   -- SPELLQUEUE --
   ----------------
 
-  SetCVar("SpellQueueWindow", "100")
+  SetCVar("SpellQueueWindow", "200")
 
   --------------------------
   -- FLOATING COMBAT TEXT --
@@ -36,7 +40,7 @@ setCVars = function()
 
   SetCVar("whisperMode", "popout_and_inline")
 
-  SetConsoleKey(nil);
+  -- SetConsoleKey(nil);
 end
 
 
