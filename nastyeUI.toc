@@ -9,4 +9,4 @@ CVars.lua
 EasyDelete.lua
 BigWigsSkin.lua
 Chat.lua
-Moving.lua
+Details.lua
