@@ -27,7 +27,10 @@ nastyeUI_ChatOnLoad = function(self, event, arg1)
       StaticPopup_Show("NASTYE_UI_FIX_CHAT")
     end
   -- this is temporary while trade/services keep popping up in wrong tabs
-  C_Timer.After(3, nastyeUI_FixChat)
+  C_Timer.After(3, function()
+    ChatFrame_RemoveChannel(ChatFrame1, "Trade")
+    ChatFrame_RemoveChannel(ChatFrame1, "Services")
+  end)
   end
 end
 
