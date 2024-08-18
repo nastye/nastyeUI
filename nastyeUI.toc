@@ -10,3 +10,4 @@ EasyDelete.lua
 BigWigsSkin.lua
 Chat.lua
 Details.lua
+MapIDs.lua
