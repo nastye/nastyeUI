@@ -13,14 +13,14 @@ setCVars = function()
   -- NAMEPLATES --
   ----------------
 
-  SetCVar("nameplateOverlapV", "1.8")
-  SetCVar("nameplateOverlapH", "1.1")
-  SetCVar("nameplateLargeTopInset", "0.05")
-  SetCVar("nameplateLargeBottomInset", "0.1")
-  SetCVar("nameplateOtherTopInset", "0.1")
-  SetCVar("nameplateOtherBottomInset", "0.1")
-  SetCVar("nameplateMaxDistance", "60")
-  SetCVar("nameplateShowOnlyNames", "1")
+  -- SetCVar("nameplateOverlapV", "1.8")
+  -- SetCVar("nameplateOverlapH", "1.1")
+  -- SetCVar("nameplateLargeTopInset", "0.065")
+  -- SetCVar("nameplateLargeBottomInset", "0.11")
+  -- SetCVar("nameplateOtherTopInset", "0.065")
+  -- SetCVar("nameplateOtherBottomInset", "0.1")
+  -- SetCVar("nameplateMaxDistance", "60")
+  -- SetCVar("nameplateShowOnlyNames", "1")
   -- This is already done in plater profile
   -- Advanced > Friendly Nameplate Selection Box Size
   -- C_NamePlate.SetNamePlateFriendlySize(80, 1)
