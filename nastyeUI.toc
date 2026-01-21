@@ -1,4 +1,4 @@
-## Interface: 100206
+## Interface: 120000, 120001
 ## Title: nastyeUI
 ## Version: 0.0.1
 ## SavedVariablesPerCharacter: nastyeUIDB
@@ -10,4 +10,4 @@ EasyDelete.lua
 BigWigsSkin.lua
 Chat.lua
 Details.lua
-MapIDs.lua
+
